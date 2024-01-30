@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Midia em HTML</title>
+</head>
+<body>
+    <h1>Imagem dinamica</h1>
+    <p>Tente abrir esse site em varios dispositivos diferentes ou simplesmente aumente e diminua o tamanho do seu navegador</p>
+
+    <picture> <!--Para abrir uma imagem no site, use a tag "PICTURE" e para adaptar a imagem a tela use o parametro
+         source media="(max-width: 750px)" srcset="imagens/foto-p.png" type="image/png"-->
+        <source media="(max-width: 750px)" srcset="imagens/foto-p.png" type="image/png">
+        <source media="(max-width: 1050px)" srcset="imagens/foto-m.png" type="image/png">
+        <img src="imagens/foto-g.png" alt="Imagem Flexivel">
+    </picture>
+
+    <h1>Reproduzindo Áudio</h1>
+    <p>Vamos aprender a reproduzir áudios em HTML5.</p>
+
+    <audio src="midia/voz-da-verdade-cristo-reina.mp3" controls autoplay></audio> <!--Essa é uma maneira de inserir audio no seu site-->
+    <!-- Extensão de compatibilidade, MP3 WAV OGG-->
+
+    <h2>Essa é a outra maneira</h2>
+
+    <audio preload="metadata" autoplay controls loop> <!--para aparecer o audio use o paramentro: "PRELOAD (metada, esse paramentro carrega as informações) AUTOPLAY" e o LOOP, porem com muito cuidado-->
+        <source src="midia/voz-da-verdade-majestade.mp3" type="audio/mpeg"> <!--1º ele tenta executar esse audio, caso não consiga vai para o proximo-->
+        
+        <source src="midia/voz-da-verdade-majestade.ogg" type="audio/ogg"> <!--depois ele tenta executar o 2º audio, caso não consiga vai para o proximo-->
+
+        <source src="midia/voz-da-verdade-majestade.wav" type="audio/wav"> <!--Por ultimo, ele tenta executar esse audio, e não consiguir, aparece a mensagem, tente evitar arquivo WAV, pois é muito PESADO.-->
+
+        <p>Infelizmente seu navegador não consegue reproduuzor audio. <a href="midia/voz-da-verdade-majestade.mp3">Clique aqui para baixar o arquivo MP3</a></p>
+    </audio>
+    
+</body>
+</html>
