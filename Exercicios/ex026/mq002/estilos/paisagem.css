@@ -1,3 +1,9 @@
 @charset "UTF-8";
 
 /* Aparelho deitato PAISAGEM (landscape) */
+
+body {
+    background-image: url(../imagens/cev-landscape.jpg); /* Imagem PAISAGEM*/  
+    background-position: left bottom;
+}
+
