@@ -14,6 +14,40 @@
 
 @media print {
     /* IMPRESSÃO */
+    * {
+        font-family: 'Courier New', Courier, monospace; /* fonte para impressora */
+    }
+
+    body {
+        background-image: url(../imagens/back-print.jpg); /* Imagem para impressora */
+    }
+
+    main {
+        width: 90vw;
+        border: 2px solid black; /* Borda para impressora */
+    }
+
+    main::after {
+        content: 'Essa impressão foi feita atravéz do site www.cursoemvideo.com'; /* texto no final da folha */
+        text-decoration: overline; /* linha separando texo */
+    }
+
+    main h1 {
+        text-shadow: none;
+        color: black;
+    }
+
+    img#phone { display: none; }
+    /* Desaparece com a imagem */
+    img#tablet { display: none; }
+    /* Desaparece com a imagem */
+    img#print { display: block; }
+    /* Aparece a imagem */
+    img#pc { display: none; }
+    /* Desaparece com a imagem */
+    img#tv { display: none; }
+    /* Desaparece com a imagem */
+
 }
 
 @media screen and (min-width: 768px) and (max-width: 992px) {
