@@ -1,5 +1,7 @@
 @charset "UTF-8";
 
+/* Versão para Mobile (Celular) */
+
 * {
     font-family: Arial, Helvetica, sans-serif;
     /* Fonte do site */
@@ -7,33 +9,71 @@
     padding: 0px;
 }
 
-body,
-html {
+body, html {
     background-color: lightgrey;
+    /* Fundo do site */
 }
 
 header {
-    background-color: gray;
+    background-color: rgb(148, 148, 148); /* Cor do cabeçalho */
 }
 
-header > h1 {
-    padding: 10px;
+header>h1 { /* Titulo do cabeçalho */
+    padding: 10px; /* Margem de dentro do cabeçalho */
+    text-align: center; /* Texto centralizado */
+}
+
+i#burguer {
+    background-color: rgb(48, 48, 48);
+    color: white;
+    display: block;
     text-align: center;
+    padding: 10px;
+    cursor: pointer;
+}
+
+i#burguer:hover {
+    background-color: white;
+    color: black;
 }
 
 menu {
-    display: block;
+    display: none; /* Para o menu ficar exibido */
 }
 
 menu > ul {
-    list-style-type: none;
+    list-style-type: none; /* Para tirar bolinhas de cada item do menu */
 }
 
-menu > ul > li > a {
-    display: block;
-    padding: 10px;
+menu > ul > li > a { /* Link que esta dentro do LI */
+    display: block; /* Para o link ficar exibido */
+    padding: 10px; /* Um espaçamento para cada item */
     text-decoration: none;
     text-align: center;
     background-color: rgb(87, 87, 87);
-    color: white;
+    color: white; /* Cor da letra */
+    border-top: 2px solid black; /* Borda do topo de cada menu */
+}
+
+menu > ul > li > a:hover {
+    background-color: gray;
+}
+
+main { /* Conteudo Principal */
+    width: 90vw; /* Largura do conteudo */
+    background-color: white; /* Cor do fundo do conteudo */
+    margin: auto; /* Margem no centro automatico */
+    margin-top: 10px;
+    padding: 10px; /* Espaçamento */
+    border-radius: 10px; /* Borda do conteudo */
+}
+
+article > h2 {
+    padding-bottom: 20px;
+}
+
+article > p {
+    text-align: justify;
+    margin-bottom: 20px;
+    text-indent: 20px; /* Espaço no inicio de cada paragrafo */
 }
